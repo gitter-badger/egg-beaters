@@ -1,0 +1,75 @@
+% Created 2015-05-26 Tue 14:36
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage[citestyle=authoryear-icomp,bibstyle=authoryear,hyperref=true,backref=true,maxcitenames=3,url=true,backend=biber,natbib=true]{biblatex}
+\tolerance=1000
+\usepackage{kk-math}
+\author{Egg Beaters}
+\date{\textit{<2015-05-26 Tue>}}
+\title{Theoretical Results}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 24.4.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section{Intermediate points of fixed points compatible words lie in A}
+\label{sec-1}
+Daniel
+
+\pagebreak
+
+\section{Coordinates of intermediate points}
+\label{sec-2}
+\begin{claim}
+Given a fixed word \( \omega \in \mathbb{F}_2 \left\langle H,V \right\rangle  \) and a compatible homotopy class $\alpha$, the coordinates of fixed points of \( \Phi_\lambda(\omega)  \) are determined up to \( O(1/\lambda)  \)
+\end{claim}
+\begin{proof}
+Assume \( \omega  \) starts with \( H^N \). Due to our assumption that intermediate points lie in \( A  \), we know that
+\[  y + N \lambda (1 - |x|) = [ML - 1, ML + 1]  \]
+therefore
+\[ 1 - \left| x \right| \in \left[ \frac{ML - 1 - y}{N \lambda}, \frac{ML + 1 - y}{N \lambda} \right] \]
+or
+\[ 1 - \left| x \right| = \frac{ML}{N\lambda} + O(\frac{1}{\lambda}) \]
+
+Same calculation shows this for words starting with \( V  \).
+\end{proof}
+
+\pagebreak
+\section{Actions}
+\label{sec-3}
+\begin{claim}
+Given a fixed word \( \omega \in \mathbb{F}_2 \left\langle H,V \right\rangle  \) and a compatible homotopy class $\alpha$, all the actions relative to the loop having (alternatingly) \( x=0,y=0  \) are determined up to \( O(1) \).
+\end{claim}
+\begin{proof}
+For each part of type \( H^N  \) or \( V^N  \) the action is
+\[ \mathsf{A} = N F(x) - N \lambda x (1- \left| x \right|) \]
+Now, \( F(x) = \lambda x (1 - \frac{\left| x \right|}{2})  \) and therefore
+\[ \mathsf{A} = \lambda N x(1 - \frac{\left| x \right|}{2}) - \lambda N x + N \lambda \left| x \right| = N \lambda x \frac{\left| x \right|}{2} \]
+
+For positive \( x  \) we get:
+
+\[ \mathsf{A} = N \lambda \frac{x^2}{2} = \frac{N \lambda}{2} \left( 1 - \frac{ML}{N \lambda} - O(\frac{1}{\lambda}) \right)^2 = \frac{N \lambda}{2} - M L = - \frac{N \lambda}{2} + O(1)  \]
+
+For a general word, we have a sum of such terms, up to double counting the area at the corners. However, there is a fixed amount of corners depending on the word, and the area of each corner is bounded by 4.
+\end{proof}
+% Emacs 24.4.1 (Org mode 8.2.10)
+\end{document}
