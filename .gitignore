@@ -1,0 +1,4 @@
+## Latex compilation
+*.blg
+*.bcf
+*.run.xml
